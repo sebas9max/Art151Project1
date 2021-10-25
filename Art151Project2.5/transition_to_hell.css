@@ -1,0 +1,11 @@
+body {
+    background-image: url("entrance_hell_2.jpeg") ;
+    background-color: rgb(31, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+p {
+color: white;
+font-family: courier;
+font-size: 150%;
+}

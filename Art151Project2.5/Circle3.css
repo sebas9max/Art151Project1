@@ -1,0 +1,22 @@
+body {
+    color: white;
+    background-image: url("lucifer.jpeg") ;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   }
+
+h1{
+    animation-direction: alternate-reverse;
+    animation-name: moveRight;
+    animation-duration: 2s;
+    color: red;
+    border: 10px, solid, black;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 150%
+}
+head{
+     color: white;
+}

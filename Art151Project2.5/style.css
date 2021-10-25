@@ -1,0 +1,20 @@
+body {
+        background-image: url("heaven_background.jpeg") ;
+        background-color: white;
+
+       }
+p {
+    color: black;
+    font-family: courier;
+    font-size: 150%;
+  }
+h1 {animation-direction: alternate-reverse;
+    animation-name: moveRight;
+    animation-duration: 2s;
+    color: rgb(168, 8, 8);
+    border: 10px, solid, black;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 150%
+    }
+    

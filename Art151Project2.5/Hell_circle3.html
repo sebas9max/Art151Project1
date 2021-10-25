@@ -1,0 +1,82 @@
+<html> 
+   
+    <head>
+        <h1>Beat Lucifer in craps!</h1>
+ Roll a pair of dice. <br>
+ If you roll a 7 or 11 you win! <br>
+ If you roll a 2,3 or 12 you lose!<br>
+ If you roll anything else, it becomes "the point".<br>
+ Continue rolling until you roll point again <br>
+ If roll the point, you win. <br>
+
+<link rel="stylesheet" href="Circle3.css">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title> Dice Stats </title>
+<script type="text/javascript">
+
+function RandomInt(a,b){
+return Math.floor(Math.random()*(b-a+1))+a
+}
+// ]]> -->
+</script>
+<script type="text/javascript">
+
+var myPoint=0;
+
+function DiceRoll(){
+// Assumes: dice are displayed as die1 and die2 images
+// Results: simulates and displays dice rolls, keeps count
+
+var die1 = RandomInt(1, 6);
+var die2 = RandomInt(1, 6);
+var dice = die1 + die2;
+
+//Good English grammar.   i.e. an eight, an eleven, etc
+var prefix="You rolled a ";
+if(dice==8 || dice==11)prefix="You rolled an ";
+
+if (dice == 7 || dice == 11){
+    myPoint=0;myResult(prefix+dice+". You automaticly WIN!")
+    setTimeout(function () {
+            window.location.href = "file:///Users/sebas/Art151/Art151Project2.5/win.html"; //will redirect to your blog page (an ex: blog.html)
+         }, 2000); return}
+if (dice == 2 || dice == 3 || myPoint == 12){
+    myPoint=0;myResult(prefix+dice+". You automaticly LOSE!")
+    setTimeout(function () {
+            window.location.href = "file:///Users/sebas/Art151/Art151Project2.5/lose.html"; //will redirect to your blog page (an ex: blog.html)
+         }, 2000);return}
+if(!myPoint){
+    myPoint=dice;myResult(prefix+dice+". That is now your point.");return}
+if(myPoint==dice){
+    myPoint=0;myResult(prefix+dice+". You win!")
+    setTimeout(function () {
+            window.location.href = "file:///Users/sebas/Art151/Art151Project2.5/win.html"; //will redirect to your blog page (an ex: blog.html)
+         }, 2000);return}
+else {myResult(prefix+dice+".");return}
+}
+
+function myResult(str){
+e=document.forms.DiceForm.elements.rollResults.value=str
+}
+
+onload=function(){
+document.forms.DiceForm.elements.rollResults.value="";
+}
+// ]]> -->
+</script>
+</head>
+
+<body>
+<div style="text-align:center">
+
+<form action="#" name="DiceForm">
+<input type="button" value="Roll the Dice" onclick="DiceRoll();" />
+<input name="rollResults" type="text" value="" readonly="readonly" size="40" />
+</form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+    background-image: url("hell_transition.jpeg") ;
+    background-color: rgb(31, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: courier;
+    font-size: 150%;
+}

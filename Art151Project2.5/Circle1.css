@@ -1,0 +1,19 @@
+body {
+    color:beige;
+    background-image: url("circle1_dragon.jpeg") ;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   }
+
+h1{
+    animation-direction: alternate-reverse;
+    animation-name: moveRight;
+    animation-duration: 2s;
+    color: rgb(168, 8, 8);
+    border: 10px, solid, black;
+    font-family: Verdana;
+    font-style: italic;
+    font-size: 150%
+}
